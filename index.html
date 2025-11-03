@@ -76,16 +76,16 @@ trié).
          Procédure TriBulle (var A : Tableau [1..n] d’entiers) ;<br>
 Variables trier : booléen ; i, tmp : entier ;<br>
 Début<br>
-trier  faux ; // détecte si le tableau est trié<br>
+trier = faux ; <br>
 Tant que trier = faux Faire<br>
-trier  vrai ;<br>
-Pour i 1 à n-1 Faire<br>
-Si A[i] > A[i+1] Alors // compare 2 éléments successifs<br>
-trier faux ;<br>
-tmp  A[i] ; A[i]  A[i+1] ; A[i+1]  tmp ;<br>
+trier = vrai ;<br>
+Pour i =1 à n-1 Faire<br>
+Si A[i] > A[i+1] Alors <br>
+trier =faux ;<br>
+tmp = A[i] ; A[i] = A[i+1] ; A[i+1] = tmp ;<br>
 FinSi ;<br>
 FinPour ;<br>
-n  n-1 ;<br>
+n =n-1 ;<br>
 FinTant que <br>
                   
                 </div>
@@ -143,7 +143,7 @@ Pour i =1 à n-1 Faire<br>
  posMin = i ;<br>
  Pour j =i + 1 à n Faire<br>
  Si A[j] < A[posMin] Alors<br>
-posmin  j ;<br>
+posmin = j ;<br>
 FinSi ;<br>
 FinPour ;<br>
   Si posMin != i Alors<br>
@@ -166,4 +166,5 @@ Fin ;
     
    </footer>
 </body>
+
 </html>
