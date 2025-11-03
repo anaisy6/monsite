@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio - Algorithmes de Tri</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Pour un style plus propre avec des icônes ou des typos -->
+</head>
+<body>
+    <header id="top">
+        <nav>
+            <ul>
+                <li><a href="#a-propos">À Propos</a></li>
+                <li><a href="#introduction">Definition</a></li>
+                <li><a href="#types">Explications</a></li>
+            </ul>
+        </nav>
+    </header>
+   <p><h4><i><b>AnaisYazli_06</b></i></h4></p>
+    <main>
+        <!-- Section À Propos de Moi -->
+        <section id="a-propos">
+            <h2>Bienvenue dans mon premier site</h2>
+            <p>
+                <strong>À propos de moi :</strong> Passionné par l’informatique, un domaine vers lequel j’ai orienté mes études, j’ai décidé de réaliser mon premier site web au cours de ma première année de licence. Son objectif est d’expliquer les algorithmes de tri, un sujet que je trouve fascinant par son implémentation et sa diversité.<br>
+            </p>
+            </section>
+
+        <!-- Section Introduction -->
+        <section id="introduction">
+            <h2 id="quoi">1. Qu'est-ce qu'un algorithme de tri?</h2>
+            <p>
+                 La question posée est qu’elle est l’intérêt du tri ? La réponse est si simple, en fait l’importance
+                du tri vient du fait que la recherche peut être optimisée à un niveau très important.
+                Les méthodes de tri sont très utilisées en pratique, en particulier en informatique de gestion où
+                on trouve beaucoup d’applications qui consistent à trier des données.
+            </p>
+
+            <h2 id="sert">2. Les methodes de tri ?</h2>
+            <p>
+               Des méthodes, dites lentes, qui trient les éléments deux à deux, de manière plus ou
+               moins efficace, mais qui nécessitent toujours de comparer chacun des N éléments avec
+               chacun des N-1 autres éléments.
+.
+
+                 Les algorithmes de ce type sont : <br>
+                        -le tri à bulle (bubble sort, en anglais).<br>
+                        - le tri par sélection (selection sort, en anglais).<br>
+                        - le tri par insertion (insertion sort, en anglais).
+            </p>
+        </section>
+
+        <!-- Section Types d'Algorithmes avec Vidéos/GIFs -->
+        <section id="types">
+            <h2>3. Les Types d'Algorithmes de Tri</h2>
+            <p>Voici les 3 exemples d'algorithmes principaux(y'en a plein dautres mais cela represente le pilier des algorithmes de tri).</p>
+
+            <!-- Tri à Bulle -->
+            <div class="algo-explication">
+                <h3 id="bulle">3.1. Tri à Bulle (Bubble Sort)</h3>
+                <p>
+                    <strong>Explication :</strong> On parcourt le tableau séquentiellement et on compare chaque élément i (i=1, ..., (n-1))
+avec son suivant ; si l’ordre n’est pas bon, on permute ces deux éléments. Ainsi après à la
+première étape, l’élément maximum se retrouve en A[n] puis on recommence jusqu’à ce que l’on n’ait plus aucune permutation à effectuer (tableau
+trié).
+                </p>
+                <div class="media-container">
+                    <!-- Utilisez une balise img pour un GIF ou video pour un MP4 -->
+                       <video width="100" height="300" controls autoplay loop muted>
+                     <source src="videom/tri-a-bulles.mp4" type="video/mp4"></video>  <br>
+                     <details class="details-code">
+            <summary>Afficher le pseudo-code </summary>
+            <div class="pseudo-code">
+         <h5><b> voici l'algorithme en pseudo-code :</b></h5>
+         Procédure TriBulle (var A : Tableau [1..n] d’entiers) ;<br>
+Variables trier : booléen ; i, tmp : entier ;<br>
+Début<br>
+trier  faux ; // détecte si le tableau est trié<br>
+Tant que trier = faux Faire<br>
+trier  vrai ;<br>
+Pour i 1 à n-1 Faire<br>
+Si A[i] > A[i+1] Alors // compare 2 éléments successifs<br>
+trier faux ;<br>
+tmp  A[i] ; A[i]  A[i+1] ; A[i+1]  tmp ;<br>
+FinSi ;<br>
+FinPour ;<br>
+n  n-1 ;<br>
+FinTant que <br>
+                  
+                </div>
+            </div>
+
+            <!-- Tri par Insertion -->
+            <div class="algo-explication">
+                <h3 id="insertion">3.2. Tri par Insertion (Insertion Sort)</h3>
+                <p>
+                    <strong>Explication :</strong> On compare chaque élément i (i=2, ..., n) avec les éléments précédents ((i-1), ..., 1), déjà
+triés, jusqu’à trouver la place de l’élément i que l’on considère.
+                </p>
+                <div class="media-container">
+                         <video width="100" height="300" controls autoplay loop muted>
+                     <source src="videom/triparinser.mp4" type="video/mp4"></video>  <br>
+                
+      <details class="details-code">
+            <summary>Afficher le pseudo-code </summary>
+            <div class="pseudo-code">
+         <h5><b> voici l'algorithme en pseudo-code :</b></h5> <br>
+                        Procédure TriInsertion (var A : Tableau [1..n] d’entiers) ;<br>
+Variables i, j, tmp : entier ;<br>
+Début<br>
+Pour i = 2 à n Faire<br>
+j =i ;<br>
+Tantque (j > 1) et (A[j] < A[j-1]) Faire<br>
+tmp = A[j] ; A[j] =A[j-1] ; A[j-1]  tmp<br>
+j = j-1 ;<br>
+FinTantque ;<br>
+FinPour ;<br>
+Fin ;<br>   </details>
+                </div>
+            </div>
+
+            <!-- Tri par Sélection -->
+            <div class="algo-explication">
+                <h3 id="selection">3.3. Tri par Sélection (Selection Sort)</h3>
+                <p>
+                    <strong>Explication :</strong> On compare chaque élément i (i=1, ..., (n-1)) à tous ses suivants ; à chaque fois que l’ordre
+n’est pas bon, on récupère l’indice de ce suivant j. À la fin de la comparaison, on compare i à
+j ; si i n'est pas egale a j alors on permute (A[i], A[j]) avec j l’indice de son plus petit suivant (c'est-à-dire,
+A[i] >A[j]). Ainsi à chaque étape k, on range le plus petit élément dans A[k].
+                </p>
+                <div class="media-container">
+                    <video width="100" height="300" controls autoplay loop muted>
+                     <source src="videom/tri-par-slection.mp4" type="video/mp4"></video>  <br>
+                     <details class="details-code">
+            <summary>Afficher le pseudo-code </summary>
+            <div class="pseudo-code">
+         <h5><b> voici l'algorithme en pseudo-code :</b></h5>
+     Procédure TriSelection (var A : Tableau [1..n] d’entiers) ;<br>
+Variables i, j, posMin, tmp : entier ;<br>
+Début<br>
+Pour i =1 à n-1 Faire<br>
+ posMin = i ;<br>
+ Pour j =i + 1 à n Faire<br>
+ Si A[j] < A[posMin] Alors<br>
+posmin  j ;<br>
+FinSi ;<br>
+FinPour ;<br>
+  Si posMin != i Alors<br>
+temp =A[posmMin] ;<br>
+A[posMin] = A[i] ;<br>
+A[i] =tmp ;<br>
+ FinSi ;<br>
+FinPour ;<br>
+Fin ;
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+          <p> Projet portfolio<br>
+             <b>Contact: </b><a href="mailto:anaisyazli6@gmail.com">anaisyazli6@gmail.com</a> <br>
+        nb:je me suis servis de mon cours et de ma propre assimilation pour la realisation de ce site educatif <br>
+        2025 </p>
+    
+   </footer>
+</body>
+</html>
